@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Website </title>
+    <title>Welcome to CITI News 2025  </title>
     <link rel="stylesheet" href="style.css">
+
+
+    <script>
+        //function to Show cuurent date and time in the title
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+            document.title = "Home | CITI News Today is - " + dateTimeString;
+        }
+  
+        // Update the Time in title bar every second
+        setInterval(updateDateTime, 1000);
+    </script>
+
 </head>
 <body>
 
@@ -16,25 +30,27 @@
             </a>
             <div class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL-2025</li>
                     <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
                     <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="Health" onclick="onNavItemClick('Health')">Health</li>
+                     <li class="hover-link nav-item" id="Technology" onclick="onNavItemClick('Technology')">Technology</li>
+                      <li class="hover-link nav-item" id="Breaking News" onclick="onNavItemClick('Breaking news')">Breaking News</li>
+                       
                 </ul>
             </div>
-            <div class="search-bar flex">
-                <input id="search-text" type="text" class="news-input" placeholder="Search Latest News">
-                <button id="search-button" class="search-button">Search</button>
-            </div>
+          <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="Search News">
+                <button id="search-button" class="search-button">Search  </button> 
+               </div>
         </div>
     </nav>
     
 
     <main>
         <div class="cards-container container flex" id="cards-container">
-            
         </div>
     </main>
-
     <template id="template-news-card">
         <div class="card">
             <div class="card-header">
@@ -50,4 +66,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
