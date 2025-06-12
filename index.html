@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | CITI News Website </title>
+    <title>Welcome to CITI News 2025  </title>
     <link rel="stylesheet" href="style.css">
+
+
+    <script>
+        //function to Show cuurent date and time in the title
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+            document.title = "Home | CITI News Today is - " + dateTimeString;
+        }
+  
+        // Update the Time in title bar every second
+        setInterval(updateDateTime, 1000);
+    </script>
+
 </head>
 <body>
 
@@ -25,20 +39,18 @@
                        
                 </ul>
             </div>
-            <div class="search-bar flex">
+          <div class="search-bar flex">
                 <input id="search-text" type="text" class="news-input" placeholder="Search News">
-                <button id="search-button" class="search-button">Search</button>
-            </div>
+                <button id="search-button" class="search-button">Search  </button> 
+               </div>
         </div>
     </nav>
     
 
     <main>
         <div class="cards-container container flex" id="cards-container">
-            
         </div>
     </main>
-
     <template id="template-news-card">
         <div class="card">
             <div class="card-header">
@@ -54,4 +66,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
